@@ -1,0 +1,9 @@
+.single-comment-container{
+    display: flex;
+}
+.comment-details{
+    background-color: #3A3B3C;
+    padding: 5px 15px;
+    margin-bottom:5px;
+    border-radius: 40px;
+}

@@ -5,10 +5,10 @@ import AllPost from './components/AllPost/AllPost';
 import {
   BrowserRouter as Router,
   Switch,
-  Route,
-  Link
+  Route
 } from "react-router-dom";
 import NotFound from './components/NotFound/NotFound';
+import PostDetail from './components/PostDetail/PostDetail';
 
 
 function App() {
@@ -22,6 +22,9 @@ function App() {
           </Route>
           <Route exact path="/">
             <AllPost />
+          </Route>
+          <Route path="/postDetail/:postId">
+            <PostDetail/>
           </Route>
           <Route path="*">
             <NotFound />

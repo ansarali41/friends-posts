@@ -1,0 +1,13 @@
+.postComment-container{
+    background-color: #18191A;
+    color:white;
+}
+.postDetail-container, .comments-container{
+    padding:10px 30px;
+    background-color: #242526;
+    margin: 0% 25%;
+    border: 5px 5px 10px lightgray;
+}
+.postDetail-container{
+    height: 300px;
+}

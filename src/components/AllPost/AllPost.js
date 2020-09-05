@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Post from '../Post/Post';
+import "./AllPost.css"
+import { Grid } from '@material-ui/core';
 
 const AllPost = () => {
     const [posts, setPosts] = useState([]);
@@ -9,12 +11,11 @@ const AllPost = () => {
         .then(data => setPosts(data))
     },[])
     return (
-        <div>
-            <h1>total posts: {posts.length}</h1>
+        <Grid container className="single-post">
             {
                 posts.map(post => <Post post={post} key={post.id}></Post>)
             }
-        </div>
+        </Grid>
     );
 };
 

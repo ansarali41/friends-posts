@@ -6,13 +6,15 @@ import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
+import { Link } from 'react-router-dom';
+import "./Post.css"
 
 
 const useStyles = makeStyles({
   root: {
-    maxWidth: 345,
+    maxWidth: 300,
     margin: '10px',
-    boxShadow: '5px 5px 10px lightGray'
+    boxShadow: '5px 5px 10px lightGray',
   },
   media: {
     height: 140,
@@ -20,12 +22,12 @@ const useStyles = makeStyles({
 });
 
 const Post = (props) => {
-    const { title, body } = props.post;
+    const { title, body,id } = props.post;
     const classes = useStyles();
 
     return (
         <Card className={classes.root}>
-          <CardActionArea>
+          <CardActionArea className="card-body-area">
             <CardContent>
               <Typography gutterBottom variant="h5" component="h2">
                 {title}
@@ -36,17 +38,10 @@ const Post = (props) => {
             </CardContent>
           </CardActionArea>
           <CardActions>
-            <Button size="small" variant="contained" color="primary">See more</Button>
+           <Link to={`/postDetail/${id}`}  className="seeMore-btn"> <Button size="small" variant="contained" color="primary">See more</Button></Link>
           </CardActions>
         </Card>
     ); 
 };
 
 export default Post;
-// (
-    //     <div>
-    //         <h3>title:{title}</h3>
-    //         <p>post: {body}</p>
-    //         <Button variant="contained" color="primary">See more</Button>
-    //     </div>
-    // );
