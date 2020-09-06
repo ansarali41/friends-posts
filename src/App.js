@@ -13,7 +13,7 @@ import PostDetail from './components/PostDetail/PostDetail';
 
 function App() {
   return (
-    <div>
+    <div className="app-container">
       <Header></Header>
       <Router>
         <Switch>

@@ -7,14 +7,21 @@
     text-decoration: none;
     display: block;
 }
-.NewsFeed{
-    color: black;
-    font-weight: bold;
-    background-color: white;
-    box-shadow: 3px 3px 5px lightgray;
-    margin-top: 0px;
-    margin-bottom: 0px;
-    padding: 5px;
+.newsFeed{
+    text-align: center;
+}
+.newsFeed nav{
+    background-color: #2D2E2F;
+    line-height: 40px;
+    font-size:20px;
+}
+nav a{
     text-decoration: none;
-    display: block;
+    margin-right:20px;
+    color: white;
+    padding: 5px;
+}
+nav a:hover{
+    background-color: #18191A;
+    text-decoration: none;
 }

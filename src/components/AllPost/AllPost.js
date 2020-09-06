@@ -11,7 +11,7 @@ const AllPost = () => {
         .then(data => setPosts(data))
     },[])
     return (
-        <Grid container className="single-post">
+        <Grid container direction="column" justify="center" alignItems="center" className="single-post">
             {
                 posts.map(post => <Post post={post} key={post.id}></Post>)
             }
